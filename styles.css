@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+  text-align: center;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-color: #FC997C;
+}
+
+.overlay{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5{
+  margin: 0;
+}
+
+h1{
+  font-size: 2rem;
+}
+h1:hover::after{
+  content: " (it's me!)";
+  color: #FC997C;
+}
+
+#upper-cloud{
+  position: relative;
+  right: 5rem;
+  z-index: 1;
+  transition: all 2s;
+}
+#upper-cloud.reveal
+{
+  /* animation: 2s reveal-secret-0; */
+  right: 9rem;
+}
+#lower-cloud{
+  position: relative;
+  left: 5rem;
+  z-index: 1;
+  transition: all 2s;
+}
+#lower-cloud.reveal
+{
+  /* animation: 2s reveal-secret-1; */
+  left: 9rem;
+}
+/* secret */
+#secret-instagram{
+  position: relative;
+  right: 8.25rem;
+  bottom: .8rem;
+}
+#secret-twitter{
+  position: relative;
+  left: 1.75rem;
+  bottom: 1rem;
+}
+/**/
+
+/* clouds animations */
+/* @keyframes reveal-secret-0 {
+  from{
+    right: 5rem;
+  }
+  to{
+    right: 9rem;
+  }
+}
+@keyframes reveal-secret-1 {
+  from{
+    left: 5rem;
+  }
+  to{
+    left: 9rem;
+  }
+} */
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:visited{
+  color: inherit;
+}
+a:hover{
+  color: #B8E4F0;
+}
+
+section{
+  padding: 1rem;
+}
+
+section#header{
+  background-color: #B8E4F0;
+  font-family: 'Sacramento', cursive;
+  border-radius: .25rem .25rem 0 0;
+}
+
+.container-bio{
+  display: inline-block;
+  width: 90%;
+  max-width: 50rem;
+  margin-bottom: 1rem;
+}
+
+.container-bio p{
+  text-align: center;
+}
+.container-bio #p-second{
+  text-align: center;
+}
+
+#img-js{
+  height: 128px;
+}
+#img-angular{
+  height: 128px;
+}
+
+section#bio{
+  background-color: #FC997C;
+  padding-top: 2rem;
+}
+
+section#acknowledge{
+  background-color: #FC997C;
+}
+
+ul{
+  width: 100%;
+  max-width: 25rem;
+  margin: 1rem auto;
+}
+
+li{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+li img{
+  margin-right: 1rem;
+}
+
+#li-english:hover, #li-static:hover, #li-js:hover{
+  font-style: inherit;
+}
+#li-english::after{
+  content: '\00a0 (Avançado)';
+  font-weight: 600;
+}
+#li-static::after{
+  content: '\00a0 (HTML, CSS, Bootstrap)';
+  font-weight: 600;
+}
+#li-js::after{
+  content: '\00a0 (ES6, TypeScript, Angular)';
+  font-weight: 600;
+}
+
+section#contact{
+  background-color: #FC997C;
+}
+
+#contact h3{
+  margin-bottom: 1rem;
+}
+
+section#footer{
+  background-color: #FC997C;
+  border-radius: 0 0 .25rem .25rem;
+}
+
+@media screen and (min-width: 700px) {
+  body{
+    padding: 2.5rem;
+  }
+
+  .container-bio p{
+    text-align: start;
+  }
+  .container-bio #p-second{
+    text-align: end;
+  }
+  #img-js{
+    float: left;
+    margin-right: 1rem;
+  }
+  #img-angular{
+    float: right;
+  }
+}
+
+/* When not a touch screen, show li content 
+  only on hover */
+@media screen and (min-width: 900px) {
+  #li-english::after{
+    content: inherit;
+  }
+  #li-static::after{
+    content: inherit;
+  }
+  #li-js::after{
+    content: inherit;
+  }
+  #li-english:hover, #li-static:hover, #li-js:hover{
+    font-style: italic;
+  }
+  #li-english:hover::after{
+    content: '\00a0 (Avançado)';
+  }
+  #li-static:hover::after{
+    content: '\00a0 (HTML, CSS, Bootstrap)';
+  }
+  #li-js:hover::after{
+    content: '\00a0 (ES6, TypeScript, Angular)';
+  }
+}
